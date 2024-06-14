@@ -1,0 +1,281 @@
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\appsettings.Development.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\appsettings.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\message.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.staticwebassets.runtime.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.exe
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.deps.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.runtimeconfig.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\paperless.pdb
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Npgsql.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.csproj.AssemblyReference.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfoInputs.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfo.cs
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.csproj.CoreCompileInputs.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cs
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.paperless.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.build.paperless.props
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.paperless.props
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.paperless.props
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\scopedcss\bundle\paperless.styles.css
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\scopedcss\projectbundle\paperless.bundle.scp.css
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.csproj.CopyComplete
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\refint\paperless.dll
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.pdb
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\paperless.genruntimeconfig.cache
+C:\Users\ASUS PC\Desktop\paperless\paperless\obj\Release\net6.0\ref\paperless.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\appsettings.Development.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\appsettings.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\message.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.staticwebassets.runtime.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.exe
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.deps.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.runtimeconfig.json
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\paperless.pdb
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Npgsql.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\bepaperless\paperless\paperless\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.csproj.AssemblyReference.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.GeneratedMSBuildEditorConfig.editorconfig
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfoInputs.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfo.cs
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.csproj.CoreCompileInputs.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cs
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cs
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.sourcelink.json
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets.build.json
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets.development.json
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.paperless.Microsoft.AspNetCore.StaticWebAssets.props
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.build.paperless.props
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.paperless.props
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.paperless.props
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\staticwebassets.pack.json
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\scopedcss\bundle\paperless.styles.css
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\scopedcss\projectbundle\paperless.bundle.scp.css
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.csproj.CopyComplete
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.dll
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\refint\paperless.dll
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.pdb
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\paperless.genruntimeconfig.cache
+D:\bepaperless\paperless\paperless\obj\Release\net6.0\ref\paperless.dll
+D:\paperless\paperless\bin\Release\net6.0\appsettings.Development.json
+D:\paperless\paperless\bin\Release\net6.0\appsettings.json
+D:\paperless\paperless\bin\Release\net6.0\message.json
+D:\paperless\paperless\bin\Release\net6.0\paperless.staticwebassets.runtime.json
+D:\paperless\paperless\bin\Release\net6.0\paperless.exe
+D:\paperless\paperless\bin\Release\net6.0\paperless.deps.json
+D:\paperless\paperless\bin\Release\net6.0\paperless.runtimeconfig.json
+D:\paperless\paperless\bin\Release\net6.0\paperless.dll
+D:\paperless\paperless\bin\Release\net6.0\paperless.pdb
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\paperless\paperless\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\paperless\paperless\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\paperless\paperless\bin\Release\net6.0\Npgsql.dll
+D:\paperless\paperless\bin\Release\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\paperless\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\paperless\paperless\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\paperless\paperless\obj\Release\net6.0\paperless.csproj.AssemblyReference.cache
+D:\paperless\paperless\obj\Release\net6.0\paperless.GeneratedMSBuildEditorConfig.editorconfig
+D:\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfoInputs.cache
+D:\paperless\paperless\obj\Release\net6.0\paperless.AssemblyInfo.cs
+D:\paperless\paperless\obj\Release\net6.0\paperless.csproj.CoreCompileInputs.cache
+D:\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cs
+D:\paperless\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cache
+D:\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cache
+D:\paperless\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cs
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.paperless.Microsoft.AspNetCore.StaticWebAssets.props
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.build.paperless.props
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.paperless.props
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.paperless.props
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets.pack.json
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets.build.json
+D:\paperless\paperless\obj\Release\net6.0\staticwebassets.development.json
+D:\paperless\paperless\obj\Release\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\paperless\paperless\obj\Release\net6.0\scopedcss\bundle\paperless.styles.css
+D:\paperless\paperless\obj\Release\net6.0\scopedcss\projectbundle\paperless.bundle.scp.css
+D:\paperless\paperless\obj\Release\net6.0\paperless.csproj.CopyComplete
+D:\paperless\paperless\obj\Release\net6.0\paperless.dll
+D:\paperless\paperless\obj\Release\net6.0\refint\paperless.dll
+D:\paperless\paperless\obj\Release\net6.0\paperless.pdb
+D:\paperless\paperless\obj\Release\net6.0\paperless.genruntimeconfig.cache
+D:\paperless\paperless\obj\Release\net6.0\ref\paperless.dll
+D:\paperless\paperless\bin\Release\net6.0\libman.json
+D:\paperlesv4\paperless\bin\Release\net6.0\appsettings.Development.json
+D:\paperlesv4\paperless\bin\Release\net6.0\appsettings.json
+D:\paperlesv4\paperless\bin\Release\net6.0\libman.json
+D:\paperlesv4\paperless\bin\Release\net6.0\message.json
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.staticwebassets.runtime.json
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.exe
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.deps.json
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.runtimeconfig.json
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\paperless.pdb
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Npgsql.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\System.Drawing.Common.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\paperlesv4\paperless\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.AssemblyReference.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.GeneratedMSBuildEditorConfig.editorconfig
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.AssemblyInfoInputs.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.AssemblyInfo.cs
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.CoreCompileInputs.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cs
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cs
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.sourcelink.json
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.build.json
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.development.json
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.paperless.Microsoft.AspNetCore.StaticWebAssets.props
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.build.paperless.props
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.paperless.props
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.paperless.props
+D:\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.pack.json
+D:\paperlesv4\paperless\obj\Release\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\paperlesv4\paperless\obj\Release\net6.0\scopedcss\bundle\paperless.styles.css
+D:\paperlesv4\paperless\obj\Release\net6.0\scopedcss\projectbundle\paperless.bundle.scp.css
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.Up2Date
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.dll
+D:\paperlesv4\paperless\obj\Release\net6.0\refint\paperless.dll
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.pdb
+D:\paperlesv4\paperless\obj\Release\net6.0\paperless.genruntimeconfig.cache
+D:\paperlesv4\paperless\obj\Release\net6.0\ref\paperless.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\appsettings.Development.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\appsettings.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\libman.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\message.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.staticwebassets.runtime.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.exe
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.deps.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.runtimeconfig.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\paperless.pdb
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Npgsql.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\System.Drawing.Common.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.AssemblyReference.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.AssemblyInfoInputs.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.AssemblyInfo.cs
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.CoreCompileInputs.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cs
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.MvcApplicationPartsAssemblyInfo.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.RazorAssemblyInfo.cs
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.paperless.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.build.paperless.props
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.paperless.props
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.paperless.props
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.pack.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.build.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\staticwebassets.development.json
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\scopedcss\bundle\paperless.styles.css
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\scopedcss\projectbundle\paperless.bundle.scp.css
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.csproj.CopyComplete
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\refint\paperless.dll
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.pdb
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\paperless.genruntimeconfig.cache
+D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Release\net6.0\ref\paperless.dll

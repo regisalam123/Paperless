@@ -1,0 +1,655 @@
+[
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "DetailApprovalCk",
+    "RelativePath": "api/Approval/DetailApprovalCk",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "DetailApprovalCkMaker",
+    "RelativePath": "api/Approval/DetailApprovalCkMaker",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aprm",
+        "Type": "paperless.Data.Models.ApprovalCkm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "DetailApprovalJob",
+    "RelativePath": "api/Approval/DetailApprovalJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "DetailApprovalReject",
+    "RelativePath": "api/Approval/DetailApprovalReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "ListApproval",
+    "RelativePath": "api/Approval/ListApproval",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "ListApprovalIsactive",
+    "RelativePath": "api/Approval/ListApprovalIsactive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rgt",
+        "Type": "paperless.Data.Models.ApprovalIA",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "ListApprovalJob",
+    "RelativePath": "api/Approval/ListApprovalJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aprj",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "ListApprovalReject",
+    "RelativePath": "api/Approval/ListApprovalReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aprr",
+        "Type": "paperless.Data.Models.Approval",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "SumbitApprovalCk",
+    "RelativePath": "api/Approval/SumbitApprovalCk",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.ApprovalCk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "SumbitApprovalIsActive",
+    "RelativePath": "api/Approval/SumbitApprovalIsActive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apri",
+        "Type": "paperless.Data.Models.ApprovalIsA",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.ApprovalController",
+    "Method": "SumbitApprovalJob",
+    "RelativePath": "api/Approval/SumbitApprovalJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apr",
+        "Type": "paperless.Data.Models.ApprovalJob",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.DepartemenController",
+    "Method": "ListDepartemen",
+    "RelativePath": "api/Departemen/ListDepartemen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dpt",
+        "Type": "paperless.Data.Models.Departemen",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.LoginController",
+    "Method": "Authorize",
+    "RelativePath": "api/Login/Authorize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usr",
+        "Type": "paperless.Data.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.LoginController",
+    "Method": "Users",
+    "RelativePath": "api/Login/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usr",
+        "Type": "paperless.Data.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "DeletePekerjaan2",
+    "RelativePath": "api/Pekerjaan/DeletePekerjaan2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dpk",
+        "Type": "paperless.Data.Models.DeletePekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "DeletePekerjaan3",
+    "RelativePath": "api/Pekerjaan/DeletePekerjaan3",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dpk",
+        "Type": "paperless.Data.Models.DeletePekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListAllCeklistPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListAllCeklistPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpek",
+        "Type": "paperless.Data.Models.Pekerjaanck",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListCeklistFormPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListCeklistFormPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpek",
+        "Type": "paperless.Data.Models.FormPekerjaanck",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListCeklistPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListCeklistPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pek",
+        "Type": "paperless.Data.Models.Pekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListFilter",
+    "RelativePath": "api/Pekerjaan/ListFilter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fil",
+        "Type": "paperless.Data.Models.FilterPekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListFormPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListFormPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpek",
+        "Type": "paperless.Data.Models.FormPekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListJob",
+    "RelativePath": "api/Pekerjaan/ListJob",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pek",
+        "Type": "paperless.Data.Models.Job",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pek",
+        "Type": "paperless.Data.Models.Pekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListPekerjaanUpdate",
+    "RelativePath": "api/Pekerjaan/ListPekerjaanUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "peku",
+        "Type": "paperless.Data.Models.PekerjaanUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "ListPendingPekerjaan",
+    "RelativePath": "api/Pekerjaan/ListPendingPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpek",
+        "Type": "paperless.Data.Models.PendingPekerjaan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "LoadDataLama2",
+    "RelativePath": "api/Pekerjaan/LoadDataLama2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Peku",
+        "Type": "paperless.Data.Models.PekerjaanUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "LoadDataLama3",
+    "RelativePath": "api/Pekerjaan/LoadDataLama3",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Pekup",
+        "Type": "paperless.Data.Models.PekerjaanUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "SaveImageAsync",
+    "RelativePath": "api/Pekerjaan/SaveImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imageBase64",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "imageBase64_2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nama",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Newtonsoft.Json.Linq.JObject",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "SaveImageAsync2",
+    "RelativePath": "api/Pekerjaan/SaveImageAsync2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imageBase64",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "imageBase64_2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "imageBase64_3",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nama",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Newtonsoft.Json.Linq.JObject",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "SumbitCeklistFormPekerjaan",
+    "RelativePath": "api/Pekerjaan/SumbitCeklistFormPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpck",
+        "Type": "paperless.Data.Models.FormPekerjaanck2",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "SumbitCeklistPekerjaan",
+    "RelativePath": "api/Pekerjaan/SumbitCeklistPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pck",
+        "Type": "paperless.Data.Models.Pekerjaanck2",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "SumbitCeklistPekerjaannonck",
+    "RelativePath": "api/Pekerjaan/SumbitCeklistPekerjaannonck",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pck",
+        "Type": "paperless.Data.Models.Pekerjaannonck",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PekerjaanController",
+    "Method": "UpdateCeklistFormPekerjaan",
+    "RelativePath": "api/Pekerjaan/UpdateCeklistFormPekerjaan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fpcku",
+        "Type": "paperless.Data.Models.FormPekerjaanck2u",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PerananController",
+    "Method": "ListPeranan",
+    "RelativePath": "api/Peranan/ListPeranan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "per",
+        "Type": "paperless.Data.Models.Peranan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.PerananController",
+    "Method": "ListPeriode",
+    "RelativePath": "api/Peranan/ListPeriode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prd",
+        "Type": "paperless.Data.Models.Periode",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.RegisterController",
+    "Method": "Users",
+    "RelativePath": "api/Register/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usr",
+        "Type": "paperless.Data.Models.Register",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.UserController",
+    "Method": "ReadId",
+    "RelativePath": "api/User/ReadIdreg",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ri",
+        "Type": "paperless.Data.Models.RegisterId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "paperless.Data.Controllers.UserController",
+    "Method": "ResetPwd",
+    "RelativePath": "api/User/ResetPwd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "paperless.Data.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
