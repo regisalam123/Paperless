@@ -653,6 +653,83 @@ namespace paperless.Data.Controllers
             return Content(jReturn.ToString(), "application/json");
         }
 
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult LoadDatatemp2([FromBody] PekerjaanUpdate Pekup)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(Pekup.IdPekerjaan.ToString());
+
+            try
+            {
+                retData = lp.LoadDataTemp2(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult LoadDatatemp3([FromBody] PekerjaanUpdate Pekup)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(Pekup.IdPekerjaan.ToString());
+
+            try
+            {
+                retData = lp.LoadDataTemp3(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+
+
         [Authorize]
         [HttpPost]
         public IActionResult ListCeklistFormPekerjaan([FromBody] FormPekerjaanck fpek)
@@ -830,6 +907,87 @@ namespace paperless.Data.Controllers
             }
             return Content(jReturn.ToString(), "application/json");
         }
+
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SaveCeklistFormPekerjaan([FromBody] FormPekerjaanck2 fpck)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+
+
+            try
+            {
+
+                string imageBase64 = fpck.foto3.ToString();
+
+                string imageBase64_2 = fpck.foto4.ToString();
+
+                string imageBase64_3 = fpck.foto5.ToString();
+
+                if (imageBase64.Substring(11, 4) == "jpeg")
+                {
+                    imageBase64 = imageBase64.Replace("data:image/jpeg;base64,", "");
+
+                }
+                if (imageBase64_2.Substring(11, 4) == "jpeg")
+                {
+                    imageBase64_2 = imageBase64_2.Replace("data:image/jpeg;base64,", "");
+
+                }
+                if (imageBase64_3.Substring(11, 4) == "jpeg")
+                {
+                    imageBase64_3 = imageBase64_3.Replace("data:image/jpeg;base64,", "");
+
+                }
+
+
+
+                this.SaveImageAsync2(imageBase64, imageBase64_2, imageBase64_3, fpck.Id.ToString());
+                await Task.Delay(1000);
+
+
+
+                string status = lp.SaveCeklistFormPekerjaan1(fpck);
+                if (status == "success")
+                {
+                    string status2 = lp.SaveCeklistFormPekerjaan2(fpck);
+                    if (status2 == "success")
+                    {
+
+                        jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                        jReturn.Add("code", statusCode);
+                        jReturn.Add("message", mc.GetMessage("save_success"));
+                    }
+                    else
+                    {
+                        statusCode = 404;
+                        jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                        jReturn.Add("code", statusCode);
+                        jReturn.Add("message", mc.GetMessage("save_not_success"));
+                    }
+
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_not_success"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
 
 
         [Authorize]
