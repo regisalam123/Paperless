@@ -279,6 +279,30 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
 
+        internal List<dynamic> LoadDataTemp2(String id_trx2)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "loaddatatemp2";
+            string p1 = "@id_trx2" + split + id_trx2 + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+        internal List<dynamic> LoadDataTemp3(String id_trx3)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "loaddatatemp3";
+            string p1 = "@id_trx3" + split + id_trx3 + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
+
 
         internal List<dynamic> ReadPendingPekerjaan(String id)
         {
@@ -361,6 +385,52 @@ namespace paperless.Libs
             return strout;
         }
 
+
+        public string SaveCeklistFormPekerjaan1(FormPekerjaanck2 fpck)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.saveformceklist1", connection, trans);
+                cmd.Parameters.AddWithValue("p_id", fpck.Id.ToString());
+                cmd.Parameters.AddWithValue("p_pekerjaanid", fpck.PekerjaanId.ToString());
+                cmd.Parameters.AddWithValue("p_uraianid", fpck.UraianId.ToString());
+                cmd.Parameters.AddWithValue("p_uraiandescr", fpck.UraianDescr.ToString());
+                cmd.Parameters.AddWithValue("p_status", fpck.Status.ToString());
+                cmd.Parameters.AddWithValue("p_foto3", fpck.Id.ToString() + "_P01.jpeg");
+                cmd.Parameters.AddWithValue("p_foto4", fpck.Id.ToString() + "_P02.jpeg");
+                cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
+
+
+
+
         public string InsertCeklistFormPekerjaan2(FormPekerjaanck2 fpck)
         {
             string strout = "";
@@ -413,6 +483,65 @@ namespace paperless.Libs
             }
             return strout;
         }
+
+        public string SaveCeklistFormPekerjaan2(FormPekerjaanck2 fpck)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+
+                foreach (var row in fpck.Kondisi)
+                {
+                    NpgsqlCommand cmd2 = new NpgsqlCommand("public.saveformceklist2", connection, trans);
+                    cmd2.Parameters.AddWithValue("p_parentid", fpck.Id.ToString());
+                    cmd2.Parameters.AddWithValue("p_itemid", row.ItemId.ToString());
+                    cmd2.Parameters.AddWithValue("p_itemdescr", row.ItemDescr.ToString());
+                    cmd2.Parameters.AddWithValue("p_line", row.Line.Value);
+                    cmd2.Parameters.AddWithValue("p_baik", row.Baik.ToString());
+                    cmd2.Parameters.AddWithValue("p_kurang_baik", row.KurangBaik.ToString());
+                    cmd2.Parameters.AddWithValue("p_uraianid", row.UraianId.ToString());
+                    cmd2.Parameters.AddWithValue("p_uraianiddescr", row.UraianIddescr.ToString());
+                    cmd2.Parameters.AddWithValue("p_cid", row.CId.ToString());
+                    cmd2.Parameters.AddWithValue("p_cdescr", row.CDescr.ToString());
+                    cmd2.Parameters.AddWithValue("p_cline", row.CLine.Value);
+                    cmd2.Parameters.AddWithValue("p_note", row.Note.ToString());
+
+
+
+                    cmd2.CommandType = CommandType.StoredProcedure;
+                    cmd2.ExecuteNonQuery();
+                }
+
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
+
+
+
+
+
+
         public string UpdateCeklistFormPekerjaan1(FormPekerjaanck2u fpcku)
         {
             string strout = "";
