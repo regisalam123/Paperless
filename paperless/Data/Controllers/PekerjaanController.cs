@@ -262,6 +262,80 @@ namespace paperless.Data.Controllers
 
         [Authorize]
         [HttpPost]
+        public IActionResult DeletePekerjaan2temp ([FromBody] DeletePekerjaantemp dpk)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(dpk.Eid.ToString());
+
+            try
+            {
+                retData = lp.Deletejob2temp(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult DeletePekerjaan3temp([FromBody] DeletePekerjaantemp dpk)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(dpk.Eid.ToString());
+
+            try
+            {
+                retData = lp.Deletejob3temp(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPost]
         public IActionResult ListCeklistPekerjaan([FromBody] Pekerjaan pek)
         {
             JObject jReturn = new JObject();
