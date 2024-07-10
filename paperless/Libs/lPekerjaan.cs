@@ -98,6 +98,34 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
+
+        internal List<dynamic> Deletejob2temp(String id_trx2)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "deletejob2temp";
+            string p1 = "@id_trx2" + split + id_trx2 + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
+        internal List<dynamic> Deletejob3temp(String id_trx3)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "deletejob3temp";
+            string p1 = "@id_trx3" + split + id_trx3 + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
+
+
+
         internal List<dynamic> ReadAllCeklist(String id_user, String id_pekerjaan, String is_check)
         {
             var cstrname = dbconn.constringName("idccore");
