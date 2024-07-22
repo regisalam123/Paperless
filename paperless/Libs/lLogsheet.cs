@@ -64,6 +64,7 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_logiddescr", ipl.LogIddescr.ToString());
                 cmd.Parameters.AddWithValue("p_maker", ipl.Maker.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitid", ipl.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", ipl.ItemUnitiddescr.ToString());
                 cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
            
                 cmd.CommandType = CommandType.StoredProcedure;
