@@ -279,9 +279,9 @@ D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Debug\net6.0\paperless.pdb
 D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Debug\net6.0\paperless.genruntimeconfig.cache
 D:\Projek GCHA\BACK-END\paperlesv4\paperless\obj\Debug\net6.0\ref\paperless.dll
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\appsettings.Development.json
+D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\appsettings.json
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\libman.json
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\message.json
-D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\appsettings.json
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\paperless.staticwebassets.runtime.json
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\paperless.exe
 D:\Projek GCHA\BACK-END\papperless new\paperless\bin\Debug\net6.0\paperless.deps.json

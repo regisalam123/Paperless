@@ -23,8 +23,8 @@ internal class Program
         {
             c.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "jwtToken_Auth_API",
-                Version = "v1"
+                Title = "PAPERLESS GCA GROUP",
+                Version = "v5"
             });
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
