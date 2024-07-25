@@ -9,5 +9,7 @@
         public Pekerjaanck3[] ListCeklist { get; set; }
         public string? Foto { get; set; }
         public string? Foto2 { get; set; }
+        public string? ItemUnitid { get; set; }
+        public string? ItemUnitiddescr { get; set; }
     }
 }
