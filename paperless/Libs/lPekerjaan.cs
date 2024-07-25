@@ -158,6 +158,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_pekerjaaniddescr", pck.PekerjaanIdDescr.ToString());
                 cmd.Parameters.AddWithValue("p_maker", pck.Maker.ToString());
                 cmd.Parameters.AddWithValue("p_foto", pck.Foto.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -206,6 +208,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_maker", pck.Maker.ToString());
                 cmd.Parameters.AddWithValue("p_foto",pck.Id.ToString()+"_C01.jpeg");
                 cmd.Parameters.AddWithValue("p_foto2",pck.Id.ToString() + "_C02.jpeg");
+                cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
