@@ -7,5 +7,8 @@
         public string? PekerjaanIdDescr { get; set; }
         public string? Maker { get; set; }
         public string? Foto { get; set; }
+        public string? ItemUnitid { get; set; }
+        public string? ItemUnitiddescr { get; set; }
+
     }
 }
