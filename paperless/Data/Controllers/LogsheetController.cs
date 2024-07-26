@@ -197,6 +197,9 @@ namespace paperless.Data.Controllers
                 string status = lp.InsertLogsheet0 (pck);
                 if (status == "success")
                 {
+                    string status2 = lp.InsertLogsheet1 (pck);
+                    if (status2 == "success")
+                    
 
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
                     jReturn.Add("code", statusCode);
@@ -221,42 +224,7 @@ namespace paperless.Data.Controllers
             }
             return Content(jReturn.ToString(), "application/json");
         }
-        [Authorize]
-        [HttpPost]
-        public IActionResult SumbitLogsheet1([FromBody] InputLogsheet1 pck)
-        {
-            JObject jReturn = new JObject();
-            var statusCode = 200;
-
-            try
-            {
-                string status = lp.InsertLogsheet1(pck);
-                if (status == "success")
-                {
-
-                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
-                    jReturn.Add("code", statusCode);
-                    jReturn.Add("message", mc.GetMessage("save_success"));
-
-                }
-                else
-                {
-                    statusCode = 404;
-                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
-                    jReturn.Add("code", statusCode);
-                    jReturn.Add("message", mc.GetMessage("save_not_success"));
-                }
-            }
-            catch (Exception ex)
-            {
-                statusCode = 500;
-                jReturn = new JObject();
-                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
-                jReturn.Add("code", statusCode);
-                jReturn.Add("message", ex.Message);
-            }
-            return Content(jReturn.ToString(), "application/json");
-        }
+      
 
         [Authorize]
         [HttpPost]
