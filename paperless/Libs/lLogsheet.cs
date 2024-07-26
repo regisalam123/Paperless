@@ -34,7 +34,6 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
-
         internal List<dynamic> ReadItemunitm(String idl)
         {
             var cstrname = dbconn.constringName("idccore");
@@ -137,6 +136,20 @@ namespace paperless.Libs
                 NpgsqlConnection.ClearPool(connection);
             }
             return strout;
+        }
+
+        internal List<dynamic> ReadDatalog(String idtgl,string idjam, string maker)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "getdatalogsheet";
+            string p1 = "@idtgl" + split + idtgl + split + "dtb";
+            string p2 = "@idjam" + split + idjam + split + "s";
+            string p3 = "@maker" + split + maker + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3);
         }
 
 
