@@ -88,7 +88,7 @@ namespace paperless.Manager
                 }),
                 // Duration of the Token
                 // Now the the Duration to 1 Hour
-                Expires = DateTime.UtcNow.AddHours(1),
+                Expires = DateTime.UtcNow.AddHours(6),
 
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(tokenKey),
