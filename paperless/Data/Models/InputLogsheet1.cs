@@ -2,7 +2,7 @@
 {
     public class InputLogsheet1
     {
-        public string? ParentId { get; set; }
+        //public string? ParentId { get; set; }
         public int? Line { get; set; }
         public string? Uraian { get; set; }
         public string? Isi { get; set; }
