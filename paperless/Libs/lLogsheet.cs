@@ -99,7 +99,7 @@ namespace paperless.Libs
             }
             return strout;
         }
-        public string InsertLogsheet1(InputLogsheet1 ipl)
+        public string InsertLogsheet1(InputLogsheet0 ipl)
         {
             string strout = "";
             string cstrname = dbconn.constringName("idccore");
@@ -110,15 +110,20 @@ namespace paperless.Libs
             trans = connection.BeginTransaction();
             try
             {
-                NpgsqlCommand cmd = new NpgsqlCommand("public.inputlogsheet1", connection, trans);
-                cmd.Parameters.AddWithValue("p_parentid", ipl.ParentId.ToString());
-                cmd.Parameters.AddWithValue("p_line", ipl.Line.Value);
-                cmd.Parameters.AddWithValue("p_uraian", ipl.Uraian.ToString());
-                cmd.Parameters.AddWithValue("p_isi", ipl.Isi.ToString());
-                cmd.Parameters.AddWithValue("p_keterangan", ipl.Keterangan.ToString());
-          
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
+
+                foreach (var row in ipl.Listlog1)
+                {
+                    NpgsqlCommand cmd2 = new NpgsqlCommand("public.inputlogsheet1", connection, trans);
+                    cmd2.Parameters.AddWithValue("p_parentid", ipl.Id.ToString());
+                    cmd2.Parameters.AddWithValue("p_line", row.Line.Value);
+                    cmd2.Parameters.AddWithValue("p_uraian", row.Uraian.ToString());
+                    cmd2.Parameters.AddWithValue("p_isi", row.Isi.ToString());
+                    cmd2.Parameters.AddWithValue("p_keterangan", row.Keterangan.ToString());
+
+                    cmd2.CommandType = CommandType.StoredProcedure;
+                    cmd2.ExecuteNonQuery();
+                }
+
                 trans.Commit();
                 strout = "success";
             }
@@ -137,6 +142,7 @@ namespace paperless.Libs
             }
             return strout;
         }
+
 
         internal List<dynamic> ReadDatalog(String idtgl,string idjam, string maker)
         {
