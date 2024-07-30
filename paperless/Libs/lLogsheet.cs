@@ -4,6 +4,7 @@ using paperless.Manager;
 using Npgsql;
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.Metrics;
 
 namespace paperless.Libs
 {
@@ -78,7 +79,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_itemunitid", ipl.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", ipl.ItemUnitiddescr.ToString());
                 cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
-           
+                cmd.Parameters.AddWithValue("p_kondisi", ipl.Kondisi.ToString());
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 trans.Commit();
@@ -118,7 +120,7 @@ namespace paperless.Libs
                     cmd2.Parameters.AddWithValue("p_line", row.Line.Value);
                     cmd2.Parameters.AddWithValue("p_uraian", row.Uraian.ToString());
                     cmd2.Parameters.AddWithValue("p_isi", row.Isi.ToString());
-                    cmd2.Parameters.AddWithValue("p_keterangan", row.Keterangan.ToString());
+                    
 
                     cmd2.CommandType = CommandType.StoredProcedure;
                     cmd2.ExecuteNonQuery();
@@ -144,18 +146,20 @@ namespace paperless.Libs
         }
 
 
-        internal List<dynamic> ReadDatalog(String idtgl,string idjam, string maker)
+        internal List<dynamic> ReadDatalog(String idtgl,string idlog , string iditem, string idjam)
         {
             var cstrname = dbconn.constringName("idccore");
             var split = "||";
             var schema = "public";
 
-            string spname = "getdatalogsheet";
+            string spname = "getdatalogsheetn";
             string p1 = "@idtgl" + split + idtgl + split + "dtb";
-            string p2 = "@idjam" + split + idjam + split + "s";
-            string p3 = "@maker" + split + maker + split + "s";
+            string p2 = "@idlog" + split + idlog + split + "s";
+            string p3 = "@iditem" + split + iditem + split + "s";
+            string p4 = "@idjam" + split + idjam + split + "s";
+           
 
-            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3);
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3,p4);
         }
 
 
