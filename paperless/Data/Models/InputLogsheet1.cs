@@ -6,6 +6,6 @@
         public int? Line { get; set; }
         public string? Uraian { get; set; }
         public string? Isi { get; set; }
-        public string? Keterangan { get; set; }
+       // public string? Keterangan { get; set; }
     }
 }
