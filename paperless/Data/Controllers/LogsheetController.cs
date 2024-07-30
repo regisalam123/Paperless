@@ -234,12 +234,13 @@ namespace paperless.Data.Controllers
             var statusCode = 200;
             List<dynamic> retData = new List<dynamic>();
             String mpi_pek1 = Convert.ToString(pek.Idtgl.ToString());
-            String mpi_pek2 = Convert.ToString(pek.Idjam.ToString());
-            String mpi_pek3 = Convert.ToString(pek.Maker.ToString());
+            String mpi_pek2 = Convert.ToString(pek.Idlog.ToString());
+            String mpi_pek3 = Convert.ToString(pek.Iditem.ToString());
+            String mpi_pek4 = Convert.ToString(pek.Idjam.ToString());
 
             try
             {
-                retData = lp.ReadDatalog(mpi_pek1,mpi_pek2,mpi_pek3);
+                retData = lp.ReadDatalog(mpi_pek1,mpi_pek2,mpi_pek3, mpi_pek4);
                 if (retData.Count > 0)
                 {
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
