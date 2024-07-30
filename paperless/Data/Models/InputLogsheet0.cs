@@ -10,7 +10,8 @@
         public string? ItemUnitid { get; set; }
         public string? ItemUnitiddescr { get; set; }
         public string? Note { get; set; }
+        public string? Kondisi { get; set; }
 
-         public InputLogsheet1 [] Listlog1 { get; set; }
+        public InputLogsheet1 [] Listlog1 { get; set; }
     }
 }
