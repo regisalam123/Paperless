@@ -162,6 +162,21 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3,p4);
         }
 
+        internal List<dynamic> Readjam(String id)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "getdatajam1";
+            string p1 = "@id" + split + id + split + "s";
+          
+
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
+
 
 
 
