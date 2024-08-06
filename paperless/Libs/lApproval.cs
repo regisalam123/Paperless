@@ -123,6 +123,9 @@ namespace paperless.Libs
                 NpgsqlCommand cmd = new NpgsqlCommand("public.submitapproval2", connection, trans);
                 cmd.Parameters.AddWithValue("p_id", apr.Id.ToString());
                 cmd.Parameters.AddWithValue("p_approval_job", apr.Approval.ToString());
+                cmd.Parameters.AddWithValue("p_approvejobby", apr.Approvejobby.ToString());
+                cmd.Parameters.AddWithValue("p_rejectjobby", apr.Rejectjobby.ToString());
+                cmd.Parameters.AddWithValue("p_note_job", apr.Notejob.ToString());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
