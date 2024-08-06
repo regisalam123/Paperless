@@ -147,9 +147,6 @@ namespace paperless.Data.Controllers
             return Content(jReturn.ToString(), "application/json");
 
         }
-
-
-
         [Authorize]
         [HttpPost]
         public IActionResult ListJob([FromBody] Job pek)
@@ -199,6 +196,43 @@ namespace paperless.Data.Controllers
             try
             {
                 retData = lp.Deletejob2(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult DeletePekerjaanall([FromBody] DeletePekerjaan dpk)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(dpk.Eid.ToString());
+
+            try
+            {
+                retData = lp.Deletejoball(mpi_idpekerjaan);
                 if (retData.Count > 0)
                 {
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
