@@ -75,6 +75,17 @@ namespace paperless.Libs
           
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
+        internal List<dynamic> Deletejoball(String id_trx)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "deletejoball";
+            string p1 = "@id_trx" + split + id_trx + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
 
         internal List<dynamic> Deletejob2(String id_trx2)
         {
