@@ -10,6 +10,9 @@
         public string? foto3 { get; set; }
         public string? foto4 { get; set; }
         public string? foto5 { get; set; }
+        public string? ItemUnit { get; set; }
+
+
 
 
         public FormPekerjaanck3[] Kondisi { get; set; }
