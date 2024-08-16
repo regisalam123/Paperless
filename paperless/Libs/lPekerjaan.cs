@@ -406,6 +406,7 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto3", fpck.Id.ToString() + "_P01.jpeg");
                 cmd.Parameters.AddWithValue("p_foto4", fpck.Id.ToString() + "_P02.jpeg");
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
+                cmd.Parameters.AddWithValue("p_itemunit", fpck.ItemUnit.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -449,6 +450,7 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto3", fpck.Id.ToString() + "_P01.jpeg");
                 cmd.Parameters.AddWithValue("p_foto4", fpck.Id.ToString() + "_P02.jpeg");
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
+                cmd.Parameters.AddWithValue("p_itemunit", fpck.ItemUnit.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -680,6 +682,58 @@ namespace paperless.Libs
             }
             return strout;
         }
+        public string InsertHistory(InputHistory iph)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.inputhistory", connection, trans);
+                cmd.Parameters.AddWithValue("p_id", iph.Id.ToString());
+                cmd.Parameters.AddWithValue("p_itemunit", iph.ItemUnit.ToString());
+                cmd.Parameters.AddWithValue("p_descr", iph.Descr.ToString());
+                cmd.Parameters.AddWithValue("p_jumlah", iph.Jumlah.ToString());
+                cmd.Parameters.AddWithValue("p_note", iph.Note.ToString());
+                cmd.Parameters.AddWithValue("p_maker", iph.Maker.ToString());
+                cmd.Parameters.AddWithValue("p_updateby", iph.Updateby.ToString());
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
+        internal List<dynamic> Readhistory(String iditem)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "gethistory";
+            string p1 = "@iditem" + split + iditem + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
 
     }
 }
