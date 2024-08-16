@@ -47,6 +47,18 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
 
+        internal List<dynamic> ReadItemunitall(String idl)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "getitemunitall";
+            string p1 = "@idl" + split + idl + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
         internal List<dynamic> ReadLogsheetdetail(String idl)
         {
             var cstrname = dbconn.constringName("idccore");
