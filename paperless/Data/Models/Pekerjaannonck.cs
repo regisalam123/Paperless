@@ -9,6 +9,7 @@
         public string? Foto { get; set; }
         public string? ItemUnitid { get; set; }
         public string? ItemUnitiddescr { get; set; }
+        public string? TypeJob { get; set; }
 
     }
 }
