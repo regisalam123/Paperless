@@ -345,6 +345,47 @@ namespace paperless.Data.Controllers
         }
 
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult LaporanDatalog([FromBody] LaporanLog pek)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_pek1 = Convert.ToString(pek.Idtglaw.ToString());
+            String mpi_pek2 = Convert.ToString(pek.Idtglak.ToString());
+            String mpi_pek3 = Convert.ToString(pek.Idjam.ToString());
+
+            try
+            {
+                retData = lp.ReadLaporanlog (mpi_pek1, mpi_pek2, mpi_pek3);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+
+        }
+
+
 
 
 
