@@ -174,6 +174,8 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3,p4);
         }
 
+
+
         internal List<dynamic> Readjam(String id)
         {
             var cstrname = dbconn.constringName("idccore");
@@ -189,7 +191,20 @@ namespace paperless.Libs
         }
 
 
+        internal List<dynamic> ReadLaporanlog(String idtglaw, string idtglak, string idjam)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
 
+            string spname = "getlaporanlogsheetn";
+            string p1 = "@idtglaw" + split + idtglaw + split + "dtb";
+            string p2 = "@idtglak" + split + idtglak + split + "dtb";
+            string p3 = "@idjam" + split + idjam + split + "s";
+
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1, p2, p3);
+        }
 
 
 
