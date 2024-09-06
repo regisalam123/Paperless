@@ -171,6 +171,7 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto", pck.Foto.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
+                cmd.Parameters.AddWithValue("p_typejob", pck.TypeJob.ToString());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -221,6 +222,7 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto2",pck.Id.ToString() + "_C02.jpeg");
                 cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
+                cmd.Parameters.AddWithValue("p_typejob", pck.TypeJob.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -406,7 +408,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto3", fpck.Id.ToString() + "_P01.jpeg");
                 cmd.Parameters.AddWithValue("p_foto4", fpck.Id.ToString() + "_P02.jpeg");
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
-                cmd.Parameters.AddWithValue("p_itemunit", fpck.ItemUnit.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitid", fpck.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", fpck.ItemUnitiddescr.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -450,7 +453,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto3", fpck.Id.ToString() + "_P01.jpeg");
                 cmd.Parameters.AddWithValue("p_foto4", fpck.Id.ToString() + "_P02.jpeg");
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
-                cmd.Parameters.AddWithValue("p_itemunit", fpck.ItemUnit.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitid", fpck.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", fpck.ItemUnitiddescr.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
