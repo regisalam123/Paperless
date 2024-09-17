@@ -507,6 +507,7 @@ namespace paperless.Libs
                     cmd2.Parameters.AddWithValue("p_cdescr", row.CDescr.ToString());
                     cmd2.Parameters.AddWithValue("p_cline", row.CLine.Value);
                     cmd2.Parameters.AddWithValue("p_note", row.Note.ToString());
+                    cmd2.Parameters.AddWithValue("p_itemidunit", row.ItemIdunit.ToString());
 
 
 
@@ -560,6 +561,7 @@ namespace paperless.Libs
                     cmd2.Parameters.AddWithValue("p_cdescr", row.CDescr.ToString());
                     cmd2.Parameters.AddWithValue("p_cline", row.CLine.Value);
                     cmd2.Parameters.AddWithValue("p_note", row.Note.ToString());
+                    cmd2.Parameters.AddWithValue("p_itemidunit", row.ItemIdunit.ToString());
 
 
 
@@ -661,6 +663,7 @@ namespace paperless.Libs
                     cmd2.Parameters.AddWithValue("p_cdescr", row.CDescr.ToString());
                     cmd2.Parameters.AddWithValue("p_cline", row.CLine.Value);
                     cmd2.Parameters.AddWithValue("p_note", row.Note.ToString());
+                    cmd2.Parameters.AddWithValue("p_itemidunit", row.ItemIdunit.ToString());
 
 
 
@@ -726,6 +729,9 @@ namespace paperless.Libs
             }
             return strout;
         }
+
+
+
         internal List<dynamic> Readhistory(String iditem)
         {
             var cstrname = dbconn.constringName("idccore");
