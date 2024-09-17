@@ -14,6 +14,7 @@
         public string? CDescr { get; set; }
         public int? CLine { get; set; }
         public string? Note { get; set; }
+        public string? ItemIdunit { get; set; }
 
     }
 }
