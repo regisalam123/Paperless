@@ -743,7 +743,17 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
+        internal List<dynamic> LoadDetailpekerjaan (String eid)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
 
+            string spname = "loaddetailpekerjaan";
+            string p1 = "@eid" + split + eid + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
 
     }
 }
