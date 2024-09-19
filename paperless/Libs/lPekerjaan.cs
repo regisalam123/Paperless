@@ -588,11 +588,6 @@ namespace paperless.Libs
             return strout;
         }
 
-
-
-
-
-
         public string UpdateCeklistFormPekerjaan1(FormPekerjaanck2u fpcku)
         {
             string strout = "";
@@ -754,6 +749,43 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
+
+        public string UpdateFormlogsheet (Formlogsheet1 fpcku)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.updateformlogsheet1", connection, trans);
+                cmd.Parameters.AddWithValue("p_parentid", fpcku.ParentId.ToString());
+                cmd.Parameters.AddWithValue("p_uraian", fpcku.Uraian.ToString());
+                cmd.Parameters.AddWithValue("p_isi", fpcku.Isi.ToString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
+
 
     }
 }
