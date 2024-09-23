@@ -1324,9 +1324,83 @@ namespace paperless.Data.Controllers
             return Content(jReturn.ToString(), "application/json");
         }
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult Deletehistory ([FromBody] DeletePekerjaan dpk)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan = Convert.ToString(dpk.Eid.ToString());
+
+            try
+            {
+                retData = lp.Deletehistory(mpi_idpekerjaan);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("Delete_success"));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
 
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult Listpekerjaantrx([FromBody] FilterTrx fil)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+            String mpi_idpekerjaan1 = Convert.ToString(fil.Tanggalaw.ToString());
+            String mpi_idpekerjaan2 = Convert.ToString(fil.Tanggalak.ToString());
+            String mpi_idpekerjaan3 = Convert.ToString(fil.PekDescr.ToString());
 
+            try
+            {
+                retData = lp.LoadPekerjaantrx (mpi_idpekerjaan1, mpi_idpekerjaan2, mpi_idpekerjaan3);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+
+        }
 
     }
 }
