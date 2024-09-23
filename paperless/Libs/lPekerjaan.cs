@@ -785,6 +785,30 @@ namespace paperless.Libs
             }
             return strout;
         }
+        internal List<dynamic> Deletehistory(String eid)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "deletehistory";
+            string p1 = "@eid" + split + eid + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+        internal List<dynamic> LoadPekerjaantrx(String tanggalaw , String tanggalak, string pekdescr)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "loadpekerjaantrx";
+            string p1 = "@tanggalaw" + split + tanggalaw + split + "dtb";
+            string p2 = "@tanggalak" + split + tanggalak + split + "dtb";
+            string p3 = "@pekdescr" + split + pekdescr + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3);
+        }
 
 
     }
