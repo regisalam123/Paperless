@@ -187,16 +187,17 @@ namespace paperless.Data.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult ListLogsheetdetail([FromBody] Logsheet pek)
+        public IActionResult ListLogsheetdetail([FromBody] Logsheet1 pek)
         {
             JObject jReturn = new JObject();
             var statusCode = 200;
             List<dynamic> retData = new List<dynamic>();
             String mpi_idpekerjaan = Convert.ToString(pek.Idl.ToString());
+            String mpi_idpekerjaan1 = Convert.ToString(pek.Idi.ToString());
 
             try
             {
-                retData = lp.ReadLogsheetdetail(mpi_idpekerjaan);
+                retData = lp.ReadLogsheetdetail(mpi_idpekerjaan, mpi_idpekerjaan1);
                 if (retData.Count > 0)
                 {
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
