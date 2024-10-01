@@ -13,5 +13,9 @@
         public string? ItemUnitiddescr { get; set; }
         public string? TypeJob { get; set; }
 
+        public string? Idlok { get; set; }
+
+        public string? Descrlok { get; set; }
+
     }
 }
