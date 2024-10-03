@@ -59,7 +59,7 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
 
-        internal List<dynamic> ReadLogsheetdetail(String idl)
+        internal List<dynamic> ReadLogsheetdetail(String idl, String idi)
         {
             var cstrname = dbconn.constringName("idccore");
             var split = "||";
@@ -67,8 +67,9 @@ namespace paperless.Libs
 
             string spname = "getlogsheetdetail";
             string p1 = "@idl" + split + idl + split + "s";
+            string p2 = "@idi" + split + idi + split + "s";
 
-            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2);
         }
 
         public string InsertLogsheet0(InputLogsheet0 ipl)
