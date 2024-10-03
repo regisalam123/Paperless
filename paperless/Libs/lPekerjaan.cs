@@ -172,6 +172,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
                 cmd.Parameters.AddWithValue("p_typejob", pck.TypeJob.ToString());
+                cmd.Parameters.AddWithValue("p_idlok", pck.Idlok.ToString());
+                cmd.Parameters.AddWithValue("p_descrlok", pck.Descrlok.ToString());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -223,6 +225,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_itemunitid", pck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", pck.ItemUnitiddescr.ToString());
                 cmd.Parameters.AddWithValue("p_typejob", pck.TypeJob.ToString());
+                cmd.Parameters.AddWithValue("p_idlok", pck.Idlok.ToString());
+                cmd.Parameters.AddWithValue("p_descrlok", pck.Descrlok.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -410,6 +414,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
                 cmd.Parameters.AddWithValue("p_itemunitid", fpck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", fpck.ItemUnitiddescr.ToString());
+                cmd.Parameters.AddWithValue("p_idlok", fpck.Idlok.ToString());
+                cmd.Parameters.AddWithValue("p_descrlok", fpck.Descrlok.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -455,6 +461,9 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto5", fpck.Id.ToString() + "_P03.jpeg");
                 cmd.Parameters.AddWithValue("p_itemunitid", fpck.ItemUnitid.ToString());
                 cmd.Parameters.AddWithValue("p_itemunitiddescr", fpck.ItemUnitiddescr.ToString());
+                cmd.Parameters.AddWithValue("p_idlok", fpck.Idlok.ToString());
+                cmd.Parameters.AddWithValue("p_descrlok", fpck.Descrlok.ToString());
+
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -609,6 +618,10 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_foto4", fpcku.Id.ToString() + "_P02.jpeg");
                 cmd.Parameters.AddWithValue("p_foto5", fpcku.Id.ToString() + "_P03.jpeg");
                 cmd.Parameters.AddWithValue("p_updateby", fpcku.Updateby.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitid", fpcku.ItemUnitid.ToString());
+                cmd.Parameters.AddWithValue("p_itemunitiddescr", fpcku.ItemUnitiddescr.ToString());
+                cmd.Parameters.AddWithValue("p_idlok", fpcku.Idlok.ToString());
+                cmd.Parameters.AddWithValue("p_descrlok", fpcku.Descrlok.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -810,6 +823,17 @@ namespace paperless.Libs
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2,p3);
         }
 
+        internal List<dynamic> ReadLokasi(String idl)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "getlokasi";
+            string p1 = "@idl" + split + idl + split + "s";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
 
     }
 }
