@@ -738,6 +738,48 @@ namespace paperless.Libs
             return strout;
         }
 
+        public string InsertHistoryn(InputHistoryn iph)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.inputhistoryn", connection, trans);
+                cmd.Parameters.AddWithValue("p_id", iph.Id.ToString());
+                cmd.Parameters.AddWithValue("p_itemunit", iph.ItemUnit.ToString());
+                cmd.Parameters.AddWithValue("p_itemdescr", iph.ItemDescr.ToString());
+                cmd.Parameters.AddWithValue("p_jumlah", iph.Jumlah.ToString());
+                cmd.Parameters.AddWithValue("p_note", iph.Note.ToString());
+                cmd.Parameters.AddWithValue("p_maker", iph.Maker.ToString());
+                cmd.Parameters.AddWithValue("p_approval", iph.Approval.ToString());
+                cmd.Parameters.AddWithValue("p_descr", iph.Descr.ToString());
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
+
 
 
         internal List<dynamic> Readhistory(String iditem)
