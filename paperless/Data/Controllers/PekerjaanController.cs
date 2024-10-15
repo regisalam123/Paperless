@@ -1179,14 +1179,14 @@ namespace paperless.Data.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult SumbitHistory([FromBody] InputHistory pck)
+        public IActionResult SumbitHistory([FromBody] InputHistoryn pck)
         {
             JObject jReturn = new JObject();
             var statusCode = 200;
 
             try
             {
-                string status = lp.InsertHistory(pck);
+                string status = lp.InsertHistoryn(pck);
                 if (status == "success")
                 {
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
