@@ -226,9 +226,196 @@ namespace paperless.Data.Controllers
             return Content(jReturn.ToString(), "application/json");
         }
 
+        [Authorize]
+        [HttpGet]
+        public IActionResult ListFilterTRXMOD([FromQuery] string idtrx)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+
+            try
+            {
+                
+                String mpi_idpekerjaan1 = Convert.ToString(idtrx);
+               
+
+                retData = lp.ReadFiltertrxmod(mpi_idpekerjaan1);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
 
 
+        [Authorize]
+        [HttpPut]
+        public IActionResult UpdateMOD([FromBody] ModUpdate0 pck)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
 
+            try
+            {
+                string status = lp.Updatemod0(pck);
+                if (status == "success")
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_success"));
+
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_not_success"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult InsertSession([FromBody] ModSession pck)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+
+            try
+            {
+                string status = lp.Insertsessionmod(pck);
+                if (status == "success")
+                {
+
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_success"));
+
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_not_success"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult ListSessionMOD([FromQuery] string userid, [FromQuery] string status)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+            List<dynamic> retData = new List<dynamic>();
+
+            try
+            {
+                // Mengonversi parameter menjadi string
+                String mpi_idpekerjaan1 = Convert.ToString(userid);
+                String mpi_idpekerjaan2 = Convert.ToString(status);
+               
+
+                retData = lp.GetSessionmod(mpi_idpekerjaan1, mpi_idpekerjaan2);
+                if (retData.Count > 0)
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("data", lc.ConvertDynamicToJArray(retData, ""));
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("read_not_found"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
+
+        [Authorize]
+        [HttpPut]
+        public IActionResult UpdatesessionMOD([FromBody] ModSession pck)
+        {
+            JObject jReturn = new JObject();
+            var statusCode = 200;
+
+            try
+            {
+                string status = lp.Updatesessionmod(pck);
+                if (status == "success")
+                {
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_success"));
+
+                }
+                else
+                {
+                    statusCode = 404;
+                    jReturn.Add("status", mc.GetMessage("api_output_ok"));
+                    jReturn.Add("code", statusCode);
+                    jReturn.Add("message", mc.GetMessage("save_not_success"));
+                }
+            }
+            catch (Exception ex)
+            {
+                statusCode = 500;
+                jReturn = new JObject();
+                jReturn.Add("status", mc.GetMessage("api_output_not_ok"));
+                jReturn.Add("code", statusCode);
+                jReturn.Add("message", ex.Message);
+            }
+            return Content(jReturn.ToString(), "application/json");
+        }
 
 
 
