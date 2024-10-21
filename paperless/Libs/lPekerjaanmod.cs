@@ -34,7 +34,7 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
         }
-
+  
         public string Insertmod0(InputMod0 ipl)
         {
             string strout = "";
@@ -96,8 +96,8 @@ namespace paperless.Libs
                     cmd2.Parameters.AddWithValue("p_itemid0", ipl.Itemid0.ToString());
                     cmd2.Parameters.AddWithValue("p_itemid1", row.Itemid1.ToString());
                     cmd2.Parameters.AddWithValue("p_itemid1descr", row.Itemid1Descr.ToString());
-                    cmd2.Parameters.AddWithValue("p_note1", row.Note1.ToString());
-                    cmd2.Parameters.AddWithValue("p_deskripsi", row.Deskripsi.ToString());
+                    cmd2.Parameters.AddWithValue("p_keadaan", row.Keadaan.ToString());
+                    cmd2.Parameters.AddWithValue("p_catatan", row.Catatan.ToString());
 
 
                     cmd2.CommandType = CommandType.StoredProcedure;
@@ -134,11 +134,153 @@ namespace paperless.Libs
 
             return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1, p2);
         }
+        internal List<dynamic> ReadFiltertrxmod(String idtrx)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
+
+            string spname = "getfiltertrxmod";
+            string p1 = "@idtrx" + split + idtrx + split + "s";
+           /* string p2 = "@tanggal" + split + tanggal + split + "dtb";
+            string p3 = "@createby" + split + createby + split + "s";
+*/
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+
+        public string Updatemod0(ModUpdate0 ipl)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.updatemod", connection, trans);
+                cmd.Parameters.AddWithValue("p_idm", ipl.Idm.ToString());
+                cmd.Parameters.AddWithValue("p_itemid0", ipl.Itemid0.ToString());
+                cmd.Parameters.AddWithValue("p_unit", ipl.Unit.ToString());
+                cmd.Parameters.AddWithValue("p_lantai", ipl.Lantai.ToString());
+                cmd.Parameters.AddWithValue("p_updateby", ipl.UpdateBy.ToString());
+                cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
+                cmd.Parameters.AddWithValue("p_parentid", ipl.Idm.ToString());
+                cmd.Parameters.AddWithValue("p_itemid1", ipl.Itemid1.ToString());
+                cmd.Parameters.AddWithValue("p_itemid1descr", ipl.Itemid1Descr.ToString());
+                cmd.Parameters.AddWithValue("p_keadaan", ipl.Keadaan.ToString());
+                cmd.Parameters.AddWithValue("p_catatan", ipl.Catatan.ToString());
 
 
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
 
+        public string Insertsessionmod(ModSession ipl)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.inputsessionmod", connection, trans);
+                cmd.Parameters.AddWithValue("p_userid", ipl.UserId.ToString());
+                cmd.Parameters.AddWithValue("p_nama", ipl.Nama.ToString());
+                cmd.Parameters.AddWithValue("p_peranan", ipl.Peranan.ToString());
+                cmd.Parameters.AddWithValue("p_eticket", ipl.Eticket.ToString());
+                cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
 
+        internal List<dynamic> GetSessionmod(String userid, string status)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
 
+            string spname = "getsessionmod";
+            string p1 = "@userid" + split + userid + split + "s";
+            string p2 = "@status" + split + status + split + "s";
+           
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1, p2);
+        }
+        public string Updatesessionmod(ModSession ipl)
+        {
+            string strout = "";
+            string cstrname = dbconn.constringName("idccore");
+            var conn = dbconn.constringList(cstrname);
+            NpgsqlTransaction trans;
+            Npgsql.NpgsqlConnection connection = new Npgsql.NpgsqlConnection(conn);
+            connection.Open();
+            trans = connection.BeginTransaction();
+            try
+            {
+                NpgsqlCommand cmd = new NpgsqlCommand("public.updatesessionmod", connection, trans);
+                cmd.Parameters.AddWithValue("p_userid", ipl.UserId.ToString());
+                cmd.Parameters.AddWithValue("p_nama", ipl.Nama.ToString());
+                cmd.Parameters.AddWithValue("p_peranan", ipl.Peranan.ToString());
+                cmd.Parameters.AddWithValue("p_eticket", ipl.Eticket.ToString());
+                cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                trans.Commit();
+                strout = "success";
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                strout = ex.Message;
+            }
+            finally
+            {
+                if (connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Close();
+                }
+                NpgsqlConnection.ClearPool(connection);
+            }
+            return strout;
+        }
 
 
 
