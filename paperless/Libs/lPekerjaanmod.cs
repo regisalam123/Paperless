@@ -232,7 +232,7 @@ namespace paperless.Libs
             return strout;
         }
 
-        internal List<dynamic> GetSessionmod(String userid, string status)
+        internal List<dynamic> GetSessionmod(String userid, string status, string tanggal)
         {
             var cstrname = dbconn.constringName("idccore");
             var split = "||";
@@ -241,8 +241,9 @@ namespace paperless.Libs
             string spname = "getsessionmod";
             string p1 = "@userid" + split + userid + split + "s";
             string p2 = "@status" + split + status + split + "s";
-           
-            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1, p2);
+            string p3 = "@tanggal" + split + tanggal + split + "dtb";
+
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1, p2,p3);
         }
         public string Updatesessionmod(ModSession ipl)
         {
