@@ -3,15 +3,6 @@ using paperless.Libs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
-using System.Drawing;
-
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.IO;
-using System.IO.Pipelines;
-using System.Runtime.CompilerServices;
-using System.Buffers.Text;
 
 namespace paperless.Data.Controllers
 {
@@ -74,12 +65,12 @@ namespace paperless.Data.Controllers
             var statusCode = 200;
             List<dynamic> retData = new List<dynamic>();
 
-            // Jika idm kosong, berikan nilai default
+            //Jika idm kosong, berikan nilai default
             string idmValue = string.IsNullOrEmpty(idm) ? "default_value" : idm;
 
             try
             {
-                // Panggil metode dengan nilai idm yang diterima dari query
+                //Panggil metode dengan nilai idm yang diterima dari query
                 retData = lp.ReadPekerjaanmoddetail(idmValue);
                 if (retData.Count > 0)
                 {
@@ -342,7 +333,7 @@ namespace paperless.Data.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult ListSessionMOD([FromQuery] string userid, [FromQuery] string status)
+        public IActionResult ListSessionMOD([FromQuery] string userid, [FromQuery] string status, [FromQuery] string tanggal)
         {
             JObject jReturn = new JObject();
             var statusCode = 200;
@@ -353,9 +344,10 @@ namespace paperless.Data.Controllers
                 // Mengonversi parameter menjadi string
                 String mpi_idpekerjaan1 = Convert.ToString(userid);
                 String mpi_idpekerjaan2 = Convert.ToString(status);
-               
+                String mpi_idpekerjaan3 = Convert.ToString(tanggal);
 
-                retData = lp.GetSessionmod(mpi_idpekerjaan1, mpi_idpekerjaan2);
+
+                retData = lp.GetSessionmod(mpi_idpekerjaan1, mpi_idpekerjaan2, mpi_idpekerjaan3);
                 if (retData.Count > 0)
                 {
                     jReturn.Add("status", mc.GetMessage("api_output_ok"));
