@@ -54,7 +54,8 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_createby", ipl.CreateBy.ToString());
                 cmd.Parameters.AddWithValue("p_updateby", ipl.UpdateBy.ToString());
                 cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
-                
+                cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -161,17 +162,7 @@ namespace paperless.Libs
             {
                 NpgsqlCommand cmd = new NpgsqlCommand("public.updatemod", connection, trans);
                 cmd.Parameters.AddWithValue("p_idm", ipl.Idm.ToString());
-                cmd.Parameters.AddWithValue("p_itemid0", ipl.Itemid0.ToString());
-                cmd.Parameters.AddWithValue("p_unit", ipl.Unit.ToString());
-                cmd.Parameters.AddWithValue("p_lantai", ipl.Lantai.ToString());
-                cmd.Parameters.AddWithValue("p_updateby", ipl.UpdateBy.ToString());
-                cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
-                cmd.Parameters.AddWithValue("p_parentid", ipl.Idm.ToString());
-                cmd.Parameters.AddWithValue("p_itemid1", ipl.Itemid1.ToString());
-                cmd.Parameters.AddWithValue("p_itemid1descr", ipl.Itemid1Descr.ToString());
-                cmd.Parameters.AddWithValue("p_keadaan", ipl.Keadaan.ToString());
-                cmd.Parameters.AddWithValue("p_catatan", ipl.Catatan.ToString());
-
+                cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -211,6 +202,11 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_peranan", ipl.Peranan.ToString());
                 cmd.Parameters.AddWithValue("p_eticket", ipl.Eticket.ToString());
                 cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+                cmd.Parameters.AddWithValue("p_tipeid", ipl.TipeId.ToString());
+                cmd.Parameters.AddWithValue("p_tipeiddescr", ipl.TipeidDescr.ToString());
+                cmd.Parameters.AddWithValue("p_unit", ipl.Unit.ToString());
+                cmd.Parameters.AddWithValue("p_statuschecker", ipl.StatusChecker.ToString());
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 trans.Commit();
@@ -262,6 +258,11 @@ namespace paperless.Libs
                 cmd.Parameters.AddWithValue("p_peranan", ipl.Peranan.ToString());
                 cmd.Parameters.AddWithValue("p_eticket", ipl.Eticket.ToString());
                 cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+                cmd.Parameters.AddWithValue("p_tipeid", ipl.TipeId.ToString());
+                cmd.Parameters.AddWithValue("p_tipeiddescr", ipl.TipeidDescr.ToString());
+                cmd.Parameters.AddWithValue("p_unit", ipl.Unit.ToString());
+                cmd.Parameters.AddWithValue("p_statuschecker", ipl.StatusChecker.ToString());
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 trans.Commit();
@@ -282,10 +283,29 @@ namespace paperless.Libs
             }
             return strout;
         }
+        internal List<dynamic> Deletesessionmod(String eticket)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
 
+            string spname = "deletesessionmod";
+            string p1 = "@eticket" + split + eticket + split + "s";
 
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1);
+        }
+        internal List<dynamic> ReadModdone(String tanggal, String status)
+        {
+            var cstrname = dbconn.constringName("idccore");
+            var split = "||";
+            var schema = "public";
 
+            string spname = "getmoddone";
+            string p1 = "@tanggal" + split + tanggal + split + "dtb";
+            string p2 = "@status" + split + status + split + "s";
 
+            return bc.ExecSqlWithReturnCustomSplit(cstrname, split, schema, spname, p1,p2);
+        }
 
 
 
