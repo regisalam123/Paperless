@@ -49,12 +49,15 @@ namespace paperless.Libs
                 NpgsqlCommand cmd = new NpgsqlCommand("public.inputmod0", connection, trans);
                 cmd.Parameters.AddWithValue("p_idm", ipl.Idm.ToString());
                 cmd.Parameters.AddWithValue("p_itemid0", ipl.Itemid0.ToString());
+                cmd.Parameters.AddWithValue("p_itemid0descr", ipl.Itemid0descr.ToString());
                 cmd.Parameters.AddWithValue("p_unit", ipl.Unit.ToString());
                 cmd.Parameters.AddWithValue("p_lantai", ipl.Lantai.ToString());
                 cmd.Parameters.AddWithValue("p_createby", ipl.CreateBy.ToString());
                 cmd.Parameters.AddWithValue("p_updateby", ipl.UpdateBy.ToString());
                 cmd.Parameters.AddWithValue("p_note", ipl.Note.ToString());
                 cmd.Parameters.AddWithValue("p_status", ipl.Status.ToString());
+                cmd.Parameters.AddWithValue("p_tipeid", ipl.TipeId.ToString());
+                cmd.Parameters.AddWithValue("p_tipeiddescr", ipl.TipeIddescr.ToString());
 
 
                 cmd.CommandType = CommandType.StoredProcedure;
